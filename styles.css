@@ -1,0 +1,253 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+/* CSS Fonts */
+@font-face {
+    font-family: "norse-bold";
+    src: 
+        url("fonts/norse-bold-webfont.woff2") format("woff2"),
+        url("fonts/norse-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sign Up Form Style and Layout */
+
+p, #odin-form {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.background {
+    width: 40%;
+    background-color: #63ca8e;
+    background-image: url(./images/form-background.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+    padding-top: 11.5%;
+    padding-bottom: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logo-text {
+    background-color: rgba(0, 0, 0, 60%);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    gap: 5px
+}
+
+.logo-text img {
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 7rem;
+    font-family: "norse-bold", sans-serif;
+}
+
+.credit a, a:visited {
+    color: #ffffff;
+}
+
+.credit a:hover {
+    cursor: pointer;
+}
+
+.sign-up {
+    width: 60%;
+    background-color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.details {
+    font-size: 1.45rem;
+    margin: 1rem 12rem 1rem 2rem;
+    padding: .5rem;
+    background-color: #f4f6f8;
+    /* border: 1px solid black; */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-container .form-heading {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    margin-left: 2rem;
+    font-size: 1.45rem;
+    padding: 0.5rem;
+    color: #2A2B2D;
+}
+
+.form-container #odin-form fieldset {
+    border-style: none;
+    background-color: #ffffff;
+    box-shadow: 0px .25rem 5px rgba(0, 0, 0, 15%);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.form-container .input-container {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    margin-right: 7rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0.5rem 0.5rem 0;
+}
+
+.form-container #odin-form .input-container .field {
+    margin: 1.25rem 0 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    margin-right: 1rem;
+    gap: 5px;
+    padding: 0rem 1rem 0.5rem 0.5rem;
+    width: 40%;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #434345;
+}
+
+.field input {
+    padding: 5px;
+    text-overflow: ellipsis;
+}
+
+.field p {
+    font-weight: lighter;
+    font-size: 0.85rem;
+}
+
+.hint {
+    color: #c10909;
+    font-size: 0.85rem;
+    font-weight: lighter;
+}
+
+ul {
+    list-style-position: inside;
+    font-weight: lighter;
+    font-size: .85rem;
+    white-space: nowrap;
+}
+
+.form-container #odin-form .submit-container {
+    margin-left: 2rem;
+}
+
+.submit-container input {
+    color: #ffffff;
+    background-color: #596D48;
+    padding: .7rem 2.25rem .7rem 2.25rem;
+    margin-bottom: 1.5rem; 
+    border-style: none;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 600;
+    box-shadow: 0px .25rem 5px rgba(0, 0, 0, 15%);
+}
+
+.submit-container input:hover {
+    cursor: pointer;
+    background-color: #657c51;
+}
+
+.submit-container input:active {
+    cursor: pointer;
+    background-color: #6f8958;
+    box-shadow: 0px .25rem 5px rgba(0, 0, 0, 19%);
+}
+
+.submit-container a {
+    color: #637653;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.submit-container a:hover {
+    cursor: pointer;
+}
+
+.submit-container a:visited {
+    color: #637653;
+}
+
+/* Input Field Validation Styles */
+
+:focus {
+    outline: 0;
+}
+
+.field input:focus {
+    background-color: #ffffff;
+    border: 1px solid #4d78cf;
+    box-shadow: 0px .1rem 5px rgba(0, 0, 0, 15%);
+}
+
+.field.error input {
+    border: 1px solid #c10909;
+}
+
+.field.error input:focus {
+    border: 1px solid #c10909;
+    box-shadow: 0px .1rem 5px rgba(145, 7, 7, 0.15);
+}
+
+.field.valid input {
+    border: 1px solid #4a9952;
+}
+
+.field.valid input:focus {
+    border: 1px solid #4a9952;
+    box-shadow: 0px .1rem 5px rgba(7, 145, 35, 0.15);
+}
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Sign-up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div class="logo-text">
+                <img src="images/odin-lined.png">
+                <h1>Odin</h1>
+            </div>
+            <div class="credit">
+                <p>
+                    Photo by 
+                    <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Halie West</a> 
+                    on 
+                    <a href="https://unsplash.com/">Unsplash</a>
+                </p>
+            </div>
+        </div>
+        <div class="sign-up">
+            <div class="details">
+                <p>
+                    <strong>
+                        This is not a real online service! You need something
+                        like this in your life to help realize your deepest dreams.
+                        Sign up <i>now</i> to get started.
+                    </strong>
+                </p>
+                <br>
+                <p>
+                    <strong>
+                        You <i>know</i> you want to.
+                    </strong>
+                </p>
+            </div>
+            <div class="form-container">
+                <form id="odin-form" action="success.html" method="GET">
+                    <fieldset>
+                        <div class="form-heading">
+                            <strong>Let's do this!</strong>
+                        </div>
+                        <div class="input-container">
+                            <div class="field" data-error="Please enter your first name">
+                                <label for="first-name">First Name<span aria-label="required">*</span></label>
+                                <input type="text" id="first-name" name="fname" placeholder="Ex: Bob">
+                                <div class="hint"></div>
+                            </div>
+                            <div class="field" data-error="Please enter your last name">
+                                <label for="last-name">Last Name<span aria-label="required">*</span></label>
+                                <input type="text" id="last-name" name="lname" placeholder="Ex: Smith">
+                                <div class="hint"></div>
+                            </div>
+                            <div class="field" data-error="Please enter a valid email">
+                                <label for="email">Email<span aria-label="required">*</span></label>
+                                <input type="email" name="email" id="email" placeholder="Ex: bsmith@gmail.com">
+                                <div class="hint"></div>
+                            </div>
+                            <div class="field" data-error="Please enter a valid phone number">
+                                <label for="phone">Phone Number<span aria-label="required">*</span></label>
+                                <input type="tel" name="phone" id="phone" placeholder="Ex: (888) 999-1111">
+                                <div class="hint"></div>
+                            </div>
+                            <div class="field" data-error="Enter a password following the guidlines below">
+                                <label for="password">Password<span aria-label="required">*</span></label>
+                                <input type="password" name="password" id="password">
+                                <div class="hint"></div>
+                                <p>Your password must be 8 or more characters with the following: </p>
+                                <ul>
+                                    <li>1 uppercase [A-Z]</li>
+                                    <li>1 lowercase [a-z]</li>
+                                    <li>1 number [0-9]</li>
+                                    <li>1 special character [@ $ ! % * ? &]</li>
+                                </ul>
+                            </div>
+                            <div class="field" data-error="Confirm your password ">
+                                <label for="password-check">Confirm Password<span aria-label="required">*</span></label>
+                                <input type="password" name="password-check" id="password-check">
+                                <div class="hint"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="submit-container">
+                        <input type="submit" value="Create Account"></input>
+                        <p>Already have an account? <a href="./index.html">Log in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
